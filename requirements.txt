@@ -1,0 +1,15 @@
+git+https://github.com/Rapptz/discord.py.git
+bs4
+youtube-search
+quotes_generator
+humanize
+wavelink
+pytesseract
+Pillow
+textblob
+pymongo
+snscrape
+dnspython
+gTTS
+PyNaCl
+spotipy

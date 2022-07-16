@@ -1,0 +1,195 @@
+{
+    "Games": {
+        "blackjack": [
+            "[users]",
+            "Starts a game of [Blackjack](https://en.wikipedia.org/wiki/Blackjack).\nIf multiple users are mentioned, they will be invited to play a game against you.\nIf no user is mentioned, you will play against a bot."
+        ],
+        "coinflip": [
+            "",
+            "Flips a coin"
+        ],
+        "connect4": [
+            "[user]",
+            "Starts a game of Connect 4.\nIf a user is mentioned, they will be invited to play a game against you.\nIf no user is mentioned, you will play against a bot."
+        ],
+        "trivia": [
+            "",
+            "Starts a trivia game"
+        ],
+        "wg": [
+            "",
+            "Alias of `word_guess`"
+        ],
+        "wordguess": [
+            "",
+            "Alias of `word_guess`"
+        ],
+        "word_guess": [
+            "",
+            "Starts a game of Word Guess.\nYou have 6 attempts to guess a 5-letter word.\nEnter a word to submit it as a guess.\n:green_square: indicates a letter is in the right position.\n:orange_square: indicates a letter is in the word, but in a different position.\n:black_large_square: indicates a letter is not in the word.\n:x: indicates your guess is not in the word list.\nEnter `end` to end the game"
+        ],
+        "8ball": [
+            "<question>",
+            "Uses a magic 8 ball to answer a question"
+        ]
+        
+    },
+    "Music": {
+        "connect": [
+            "",
+            "Connects to a voice channel"
+        ],
+        "current": [
+            "",
+            "Alias of `nowplaying`"
+        ],
+        "dc": [
+            "",
+            "Alias of `stop`"
+        ],
+        "disconnect": [
+            "",
+            "Alias of `stop`"
+        ],
+        "dis": [
+            "",
+            "Alias of `stop`"
+        ],
+        "join": [
+            "",
+            "Alias of `connect`"
+        ],
+        "leave": [
+            "",
+            "Alias of `stop`"
+        ],
+        "loop": [
+            "Toggles looping for the current player"
+        ],
+        "move": [
+            "<from> <to>",
+            "Moves a song from one position in the queue to another"
+        ],
+        "nowplaying": [
+            "",
+            "Displays the song that is currently playing"
+        ],
+        "np": [
+            "Alias of `nowplaying"
+        ],
+        "pause": [
+            "",
+            "Pauses the current player"
+        ],
+        "play ": [
+            "<YouTube URL>",
+            "Plays a specified video from YouTube"
+        ],
+        "p": [
+            "<YouTube URL>",
+            "Alias of `play`"
+        ],
+        "queue": [
+            "[page]",
+            "Shows videos in the queue at a specified page (defaults to page 1)"
+        ],
+        "remove": [
+            "<position>",
+            "Removes an item at a specified position"
+        ],
+        "resume": [
+            "",
+            "Resumes the current player"
+        ],
+        "res": [
+            "",
+            "Alias of `resume`"
+        ],
+        "sb": [
+            "<sound name>",
+            "Alias of `soundboard`"
+        ],
+        "skip": [
+            "",
+            "Skips the current song"
+        ],
+        "soundboard": [
+            "<sound name>",
+            "[UNUSED]"
+        ],
+        "stop": [
+            "",
+            "Completely stops the player and disconnects it from the voice channel"
+        ],
+        "s": [
+            "",
+            "Alias of `skip`"
+        ],
+        "volume": [
+            "[0-100]",
+            "Sets the volume from 0-100, or displays the current volume if no volume argument is given"
+        ],
+        "vol": [
+            "[0-100]",
+            "Alias of `volume`"
+        ]
+    },
+    
+    "Other": {
+        "help": [
+            "[category/command name]",
+            "Displays help messages for a command, or an entire category of commands"
+        ],
+        "ctx": [
+            "[command name]",
+            "Displays help messages for context menu commands"
+        ],
+        "ping": [
+            "",
+            "Displays the bot's response time in milliseconds"
+        ]
+    },
+
+    "Social": {
+        "hug": [
+            "<user>",
+            "Gives a user a hug"
+        ],
+        "kill": [
+            "<user>",
+            "Kills a user"
+        ],
+        "kiss": [
+            "<user>",
+            "Gives a user a kiss"
+        ],
+        "poke": [
+            "<user>",
+            "Pokes a user"
+        ],
+        "punch": [
+            "<user>",
+            "Punches a user"
+        ],
+        "ship": [
+            "<user> <someone/something>",
+            "Calculates the compatibility between a specified user and another person/object"
+        ],
+        "slap": [
+            "<user>",
+            "Slaps a user"
+        ]
+    },
+    
+    "Utilities": {
+        "ocr": [
+            "<image as an attachment>",
+            "Gets all text from attached images"
+        ],
+        "translate": [
+            "<language> <message>",
+            "Translates a specified message into a specified language"
+        ]
+    }
+    
+}
