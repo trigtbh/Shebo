@@ -22,41 +22,32 @@ class Games(commands.Cog):
         return await ctx.send(embed=embed)
 
     @commands.command()
-    async def roll(self, ctx, sides=None, dice=None):
-        if not sides:
-            sides = 6
-        elif sides:
-            sides = sides.lower()
-            if sides[0] != "d":
-                embed = error("Dice Roll")
-                embed.description = "🚫 " + self.bot.response(2) + " you need to enter a valid number of sides (`d[sides]`)."
-                return await ctx.send(embed=embed)
-            try:
-                temp = int(sides[1:])
-            except: 
-                embed = error("Dice Roll")
-                embed.description = "🚫 " + self.bot.response(2) + " you need to enter a valid number of sides (`d[sides]`)."
-                return await ctx.send(embed=embed)
-            if temp < 0:
-                embed = error("Dice Roll")
-                embed.description = "🚫 " + self.bot.response(2) + " you need to role a die with at least 1 side."
-                return await ctx.send(embed=embed)
-            goodsides = temp
-        if dice is None:
-            dice = 1
+    async def roll(self, ctx, notation=None):
+        good = True
+        params = notation.split("d")
+        if params[0] == "":
+            params[0] = "1"
+        if params[1] == "":
+            good = False
         else:
             try:
-                dice = int(dice)
+                times = int(params[0])
+                sides = int(params[1])
             except:
-                embed = error("Dice Roll")
-                embed.description = "🚫 " + self.bot.response(2) + " you need to enter a valid number of dice you wish to roll."
-                return await ctx.send(embed=embed)  
-            
+                good = False
+            else:
+                if times < 1 or sides < 1:
+                    good = False
+        if not good:
+            embed = error("Dice Roll")
+            embed.description = "🚫 " + self.bot.response(2) + " you need to specify a valid [AdX dice notation](https://en.wikipedia.org/wiki/Dice_notation)."
+            return await ctx.send(embed=embed)
+
         embed = botembed("Dice Roll")
-        correct = "die" if dice == 1 else "dice"
-        desc = f"You rolled **{dice}** {correct} with **{goodsides}** side{'s' if goodsides > 1 else ''}.\n`"
-        for _ in range(dice):
-            desc += str(random.randint(1, goodsides)) + ", "
+        correct = "time" if times == 1 else "times"
+        desc = f"You rolled a {sides}-sided die {times} {correct}.\n`"
+        for _ in range(times):
+            desc += str(random.randint(1, sides)) + ", "
         embed.description = desc[:-2] + "`"
         
         return await ctx.send(embed=embed)

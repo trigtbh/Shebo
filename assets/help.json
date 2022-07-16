@@ -12,6 +12,10 @@
             "[user]",
             "Starts a game of Connect 4.\nIf a user is mentioned, they will be invited to play a game against you.\nIf no user is mentioned, you will play against a bot."
         ],
+        "roll": [
+            "<dice configuration>",
+            "Rolls a dice, using standard [AdX dice notation](https://en.wikipedia.org/wiki/Dice_notation) to configure the rolls."
+        ],
         "trivia": [
             "",
             "Starts a trivia game"
